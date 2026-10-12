@@ -1,0 +1,99 @@
+{
+  "name": "Brief",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "brand_email": {
+      "type": "string"
+    },
+    "brand_name": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string",
+      "description": "What the campaign must achieve."
+    },
+    "description": {
+      "type": "string"
+    },
+    "content_type": {
+      "type": "string",
+      "enum": [
+        "social_reel",
+        "cinematic_film",
+        "animation",
+        "graphic_design"
+      ]
+    },
+    "aspect_ratio": {
+      "type": "string"
+    },
+    "license_tier": {
+      "type": "string",
+      "enum": [
+        "exclusive",
+        "standard",
+        "editorial"
+      ],
+      "default": "standard"
+    },
+    "deliverables": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "technical_specs": {
+      "type": "string"
+    },
+    "target_audience": {
+      "type": "string"
+    },
+    "tone": {
+      "type": "string"
+    },
+    "required_tools": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "budget_min": {
+      "type": "number"
+    },
+    "budget_max": {
+      "type": "number"
+    },
+    "currency": {
+      "type": "string",
+      "default": "USD"
+    },
+    "deadline": {
+      "type": "string",
+      "format": "date"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "open",
+        "in_review",
+        "closed"
+      ],
+      "default": "open"
+    },
+    "ai_assisted": {
+      "type": "boolean",
+      "default": false
+    },
+    "ai_original_idea": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "content_type"
+  ]
+}
